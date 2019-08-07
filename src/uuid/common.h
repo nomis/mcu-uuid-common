@@ -29,7 +29,8 @@ namespace uuid {
 std::string read_flash_string(const __FlashStringHelper *flash_str);
 using flash_string_vector = std::vector<const __FlashStringHelper*>;
 
-uint64_t get_uptime_ms(); // Must be called regularly to detect 32-bit overflow
+void loop(); // Must be called regularly to detect 32-bit uptime overflow
+uint64_t get_uptime_ms();
 
 } // namespace uuid
 

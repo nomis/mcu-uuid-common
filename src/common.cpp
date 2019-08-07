@@ -32,6 +32,10 @@ std::string read_flash_string(const __FlashStringHelper *flash_str) {
 	return str;
 }
 
+void loop() {
+	get_uptime_ms();
+}
+
 uint64_t get_uptime_ms() {
 	static uint32_t high_millis = 0;
 	static uint32_t low_millis = 0;
