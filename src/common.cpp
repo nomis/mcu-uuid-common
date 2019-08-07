@@ -25,9 +25,9 @@
 namespace uuid {
 
 std::string read_flash_string(const __FlashStringHelper *flash_str) {
-	std::string str(strlen_P(reinterpret_cast<PGM_P>(flash_str)), '\0');
+	std::string str(::strlen_P(reinterpret_cast<PGM_P>(flash_str)), '\0');
 
-	strncpy_P(&str[0], reinterpret_cast<PGM_P>(flash_str), str.capacity() + 1);
+	::strncpy_P(&str[0], reinterpret_cast<PGM_P>(flash_str), str.capacity() + 1);
 
 	return str;
 }
@@ -40,7 +40,7 @@ uint64_t get_uptime_ms() {
 	static uint32_t high_millis = 0;
 	static uint32_t low_millis = 0;
 
-	uint32_t now_millis = millis();
+	uint32_t now_millis = ::millis();
 
 	if (now_millis < low_millis) {
 		high_millis++;
