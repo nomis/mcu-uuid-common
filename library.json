@@ -1,7 +1,7 @@
 {
 	"name": "uuid-common",
 	"description": "Common utilities library",
-	"keywords": "uuid-uk,common,utility,uptime",
+	"keywords": "utility, uptime",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/nomis/mcu-uuid-common.git"
