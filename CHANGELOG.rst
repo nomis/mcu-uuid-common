@@ -12,7 +12,7 @@ First stable release.
 Added
 ~~~~~
 
-* Function ``void uuid::loop()`` (that should be called regularly).
+* Function ``void uuid::loop()`` that should be called regularly.
 * Function ``uint64_t uuid::get_uptime_ms()`` to get the current uptime
   as a 64-bit milliseconds value.
 * Function ``std::string uuid::read_flash_string(const __FlashStringHelper *flash_str)``
