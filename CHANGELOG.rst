@@ -9,6 +9,11 @@ Added
 
 * Test builds of the example.
 
+Changed
+~~~~~~~
+
+* Exclude the test directory from exports of the library source code.
+
 1.0.0_ |--| 2019-08-11
 ----------------------
 
