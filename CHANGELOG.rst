@@ -8,6 +8,7 @@ Added
 ~~~~~
 
 * Test builds of the example.
+* Unit tests of the uptime overflow handling.
 
 Changed
 ~~~~~~~
