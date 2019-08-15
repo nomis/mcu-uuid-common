@@ -4,6 +4,11 @@ Change log
 Unreleased_
 -----------
 
+1.0.1_ |--| 2019-08-15
+----------------------
+
+Update example and add tests.
+
 Added
 ~~~~~
 
@@ -14,6 +19,12 @@ Changed
 ~~~~~~~
 
 * Exclude the test directory from exports of the library source code.
+
+Fixed
+~~~~~
+
+* Remove use of ``Serial.printf()`` from the example (which does not
+  exist in the standard Arduino library).
 
 1.0.0_ |--| 2019-08-11
 ----------------------
@@ -32,5 +43,6 @@ Added
 
 .. |--| unicode:: U+2013 .. EN DASH
 
-.. _Unreleased: https://github.com/nomis/mcu-uuid-common/compare/1.0.0...HEAD
+.. _Unreleased: https://github.com/nomis/mcu-uuid-common/compare/1.0.1...HEAD
+.. _1.0.1: https://github.com/nomis/mcu-uuid-common/compare/1.0.0...1.0.1
 .. _1.0.0: https://github.com/nomis/mcu-uuid-common/commits/1.0.0
