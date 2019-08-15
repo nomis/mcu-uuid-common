@@ -4,6 +4,11 @@ Change log
 Unreleased_
 -----------
 
+Fixed
+~~~~~
+
+* Example now prints the time part of the uptime instead of ignoring it.
+
 1.0.1_ |--| 2019-08-15
 ----------------------
 

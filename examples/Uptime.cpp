@@ -35,11 +35,11 @@ public:
 				  + 2 + 1 /* minutes */
 				  + 2 + 1 /* seconds */
 				  + 3 /* milliseconds */
-				  + 1];
+				  + 1] = { 0 };
 		int ret = snprintf_P(time, sizeof(time), PSTR("%02u:%02u:%02u.%03u"),
 				hours, minutes, seconds, milliseconds);
 		if (ret > 0) {
-			len += ret;
+			len += print.print(time);
 		}
 		return len;
 	}
