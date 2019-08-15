@@ -10,6 +10,7 @@
 	"license": "GPL-3.0-or-later",
 	"export": {
 		"exclude": [
+			".travis.yml",
 			"test/*"
 		]
 	},
