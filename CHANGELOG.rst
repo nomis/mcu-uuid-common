@@ -4,6 +4,11 @@ Change log
 Unreleased_
 -----------
 
+Added
+~~~~~
+
+* Test builds of the example.
+
 1.0.0_ |--| 2019-08-11
 ----------------------
 
