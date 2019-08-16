@@ -4,6 +4,11 @@ Change log
 Unreleased_
 -----------
 
+1.0.2_ |--| 2019-08-16
+----------------------
+
+Fix example.
+
 Fixed
 ~~~~~
 
@@ -48,6 +53,7 @@ Added
 
 .. |--| unicode:: U+2013 .. EN DASH
 
-.. _Unreleased: https://github.com/nomis/mcu-uuid-common/compare/1.0.1...HEAD
+.. _Unreleased: https://github.com/nomis/mcu-uuid-common/compare/1.0.2...HEAD
+.. _1.0.2: https://github.com/nomis/mcu-uuid-common/compare/1.0.1...1.0.2
 .. _1.0.1: https://github.com/nomis/mcu-uuid-common/compare/1.0.0...1.0.1
 .. _1.0.0: https://github.com/nomis/mcu-uuid-common/commits/1.0.0
