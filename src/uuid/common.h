@@ -24,6 +24,12 @@
 #include <string>
 #include <vector>
 
+/**
+ * Common utilities.
+ *
+ * - <a href="https://github.com/nomis/mcu-uuid-common/">Git Repository</a>
+ * - <a href="https://platformio.org/lib/show/6624/uuid-common">PlatformIO library</a>
+ */
 namespace uuid {
 
 /**
