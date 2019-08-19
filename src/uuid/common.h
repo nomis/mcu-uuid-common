@@ -27,6 +27,10 @@
 /**
  * Common utilities.
  *
+ * Usage:
+ * - Call uuid::loop() regularly and then call uuid::get_uptime_ms() when the uptime is required.
+ *
+ * Links:
  * - <a href="https://github.com/nomis/mcu-uuid-common/">Git Repository</a>
  * - <a href="https://platformio.org/lib/show/6624/uuid-common">PlatformIO library</a>
  */
