@@ -33,24 +33,30 @@ namespace uuid {
  * reading it on the platform.
  *
  * @param[in] flash_str Pointer to string stored in flash.
+ * @since 1.0.0
  */
 std::string read_flash_string(const __FlashStringHelper *flash_str);
 
 /**
  * Type definition for a std::vector of flash strings.
+ *
+ * @since 1.0.0
  */
 using flash_string_vector = std::vector<const __FlashStringHelper*>;
 
 /**
  * Loop function that must be called regularly to detect a 32-bit
  * uptime overflow.
+ *
+ * @since 1.0.0
  */
 void loop();
 
 /**
  * Get the current uptime as a 64-bit milliseconds value.
  *
- * @return the current uptime in milliseconds.
+ * @return The current uptime in milliseconds.
+ * @since 1.0.0
  */
 uint64_t get_uptime_ms();
 
