@@ -27,6 +27,10 @@
 /**
  * Common utilities.
  *
+ * Usage:
+ * - Call uuid::loop() regularly and then call uuid::get_uptime_ms() when the uptime is required.
+ *
+ * Links:
  * - <a href="https://github.com/nomis/mcu-uuid-common/">Git Repository</a>
  * - <a href="https://mcu-uuid-common.readthedocs.io/">Documentation</a>
  */
