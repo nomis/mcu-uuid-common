@@ -9,11 +9,15 @@ cache:
     - "~/.platformio"
 
 install:
-  - pip3 install -U platformio
+  - pip3 install --user --upgrade pip
+  - pip3 install --user setuptools
+  - pip3 install --user Sphinx
+  - pip3 install --user platformio
   - platformio update
 
 script:
   - make -C test
+  - make -C docs html linkcheck
 
 notifications:
   email:

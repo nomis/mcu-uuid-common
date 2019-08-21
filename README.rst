@@ -1,17 +1,25 @@
-Common utilities library |Build Status|
-=======================================
+mcu-uuid-common |Build Status|
+==============================
 
-The primary purpose of this library is to maintain a common 64-bit
-uptime in milliseconds with overflow handling, as long as the loop
-function is called regularly.
+Description
+-----------
 
-* `Change log <CHANGELOG.rst>`_
+Microcontroller common utilities library
 
-Usage
------
+Purpose
+-------
 
-Call ``uuid::loop()`` regularly and then call ``uuid::get_uptime_ms()``
-when the uptime is required.
+The primary purpose of this library is to maintain a common 64-bit uptime in
+milliseconds with overflow handling, as long as the loop function is called
+regularly.
+
+Documentation
+-------------
+
+`Read the documentation <https://mcu-uuid-common.readthedocs.io/>`_ generated
+from the docs_ directory.
+
+.. _docs: docs/
 
 .. |Build Status| image:: https://travis-ci.org/nomis/mcu-uuid-common.svg?branch=master
    :target: https://travis-ci.org/nomis/mcu-uuid-common
