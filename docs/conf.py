@@ -20,6 +20,7 @@ release = u''
 language = None
 exclude_patterns = ['build', 'Thumbs.db', '.DS_Store']
 pygments_style = 'sphinx'
+highlight_language = 'c++'
 todo_include_todos = False
 
 linkcheck_timeout = 60
