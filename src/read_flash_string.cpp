@@ -17,3 +17,19 @@
  */
 
 #include <uuid/common.h>
+
+#include <Arduino.h>
+
+#include <string>
+
+namespace uuid {
+
+std::string read_flash_string(const __FlashStringHelper *flash_str) {
+	std::string str(::strlen_P(reinterpret_cast<PGM_P>(flash_str)), '\0');
+
+	::strncpy_P(&str[0], reinterpret_cast<PGM_P>(flash_str), str.capacity() + 1);
+
+	return str;
+}
+
+} // namespace uuid

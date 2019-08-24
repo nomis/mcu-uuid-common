@@ -17,3 +17,24 @@
  */
 
 #include <uuid/common.h>
+
+#include <Arduino.h>
+
+namespace uuid {
+
+uint64_t get_uptime_ms() {
+	static uint32_t high_millis = 0;
+	static uint32_t low_millis = 0;
+
+	uint32_t now_millis = ::millis();
+
+	if (now_millis < low_millis) {
+		high_millis++;
+	}
+
+	low_millis = now_millis;
+
+	return ((uint64_t)high_millis << 32) | low_millis;
+}
+
+} // namespace uuid

@@ -17,3 +17,11 @@
  */
 
 #include <uuid/common.h>
+
+namespace uuid {
+
+void loop() {
+	get_uptime_ms();
+}
+
+} // namespace uuid

@@ -4,6 +4,11 @@ Change log
 Unreleased_
 -----------
 
+Changed
+~~~~~~~
+
+* Put each function in a separate file to improve linker behaviour.
+
 1.0.2_ |--| 2019-08-16
 ----------------------
 
