@@ -24,6 +24,7 @@
 #include <cstddef>
 #include <cstdint>
 #include <cstring>
+#include <string>
 
 #define PROGMEM
 #define PGM_P const char *
@@ -55,10 +56,18 @@ public:
 	size_t print(const char *data) { return write(reinterpret_cast<const uint8_t *>(data), strlen(data)); }
 	size_t print(const __FlashStringHelper *data) { return print(reinterpret_cast<const char *>(data)); }
 	size_t print(const Printable &printable) { return printable.printTo(*this); }
+	size_t print(int value) { return print(std::to_string(value).c_str()); }
+	size_t print(unsigned int value) { return print(std::to_string(value).c_str()); }
+	size_t print(long value) { return print(std::to_string(value).c_str()); }
+	size_t print(unsigned long value) { return print(std::to_string(value).c_str()); }
 	size_t println() { return print("\r\n"); }
 	size_t println(const char *data) { return print(data) + println(); }
 	size_t println(const __FlashStringHelper *data) { return print(reinterpret_cast<const char *>(data)) + println(); }
 	size_t println(const Printable &printable) { return printable.printTo(*this) + println(); }
+	size_t println(int value) { return print(std::to_string(value).c_str()) + println(); }
+	size_t println(unsigned int value) { return print(std::to_string(value).c_str()) + println(); }
+	size_t println(long value) { return print(std::to_string(value).c_str()) + println(); }
+	size_t println(unsigned long value) { return print(std::to_string(value).c_str()) + println(); }
 	virtual void flush() { };
 };
 

@@ -6,6 +6,7 @@ all: build native
 build:
 	rm -rf build/*/.pio
 	platformio run -d build/example-Uptime
+	build/example-Uptime/.pio/build/native/program >../examples/Uptime.txt
 
 native:
 	rm -rf native/.pio
