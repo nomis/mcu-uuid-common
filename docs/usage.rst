@@ -17,6 +17,7 @@ Output
 ~~~~~~
 
 .. literalinclude:: ../examples/Uptime.txt
+   :language: none
 
 .. |uuid::loop()| replace:: ``uuid::loop()``
 .. _uuid::loop(): https://mcu-doxygen.uuid.uk/namespaceuuid.html#ae79301ba196893006f82ee49ed75c2d7
