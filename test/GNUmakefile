@@ -14,5 +14,5 @@ native:
 
 doxygen:
 	wget https://raw.githubusercontent.com/nomis/mcu-uuid-doxygen/master/Doxyfile -O Doxyfile
-	rm -rf doxygen
+	rm -rf html
 	doxygen
