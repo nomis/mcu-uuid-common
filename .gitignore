@@ -1,4 +1,4 @@
 .pio/
 pio_local.ini
 test/Doxyfile
-test/html
+test/html/
