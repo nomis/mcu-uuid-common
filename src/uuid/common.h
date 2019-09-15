@@ -39,9 +39,29 @@ namespace uuid {
  * reading it on the platform.
  *
  * @param[in] flash_str Pointer to string stored in flash.
+ * @return A string copy of the flash string.
  * @since 1.0.0
  */
 std::string read_flash_string(const __FlashStringHelper *flash_str);
+
+/**
+ * Append to a std::string by printing a Printable object.
+ *
+ * @param[in] printable Printable object.
+ * @param[in,out] output String to append to.
+ * @return The number of bytes that were written.
+ * @since 1.1.0
+ */
+size_t print_to_string(const Printable &printable, std::string &output);
+
+/**
+ * Create a std::string from a Printable object.
+ *
+ * @param[in] printable Printable object.
+ * @return A string containing the printed output.
+ * @since 1.1.0
+ */
+std::string printable_to_string(const Printable &printable);
 
 /**
  * Type definition for a std::vector of flash strings.

@@ -4,6 +4,11 @@ Change log
 Unreleased_
 -----------
 
+Addded
+~~~~~~
+
+* Functions to output a ``Printable`` to a ``std::string``.
+
 Changed
 ~~~~~~~
 
