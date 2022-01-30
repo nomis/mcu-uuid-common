@@ -32,6 +32,6 @@ Resources
    Source code <https://github.com/nomis/mcu-uuid-common>
    Releases <https://github.com/nomis/mcu-uuid-common/releases>
    Namespace reference <https://mcu-doxygen.uuid.uk/namespaceuuid.html>
-   PlatformIO library <https://platformio.org/lib/show/6624/uuid-common>
+   PlatformIO library <https://registry.platformio.org/libraries/nomis/uuid-common>
    changelog
    Issue tracker <https://github.com/nomis/mcu-uuid-common/issues>
