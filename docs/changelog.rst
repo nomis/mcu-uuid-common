@@ -4,13 +4,18 @@ Change log
 Unreleased_
 -----------
 
+Changed
+~~~~~~~
+
+* Use ESP32 function to get the uptime as a 64-bit value.
+
 1.1.0_ |--| 2019-09-15
 ----------------------
 
 Printable to string functions.
 
-Addded
-~~~~~~
+Added
+~~~~~
 
 * Functions to output a ``Printable`` to a ``std::string``.
 

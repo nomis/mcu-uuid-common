@@ -1,6 +1,6 @@
 /*
  * uuid-common - Microcontroller common utilities
- * Copyright 2019  Simon Arlott
+ * Copyright 2019,2022  Simon Arlott
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -18,10 +18,14 @@
 
 #include <uuid/common.h>
 
+#include <Arduino.h>
+
 namespace uuid {
 
 void loop() {
+#if !defined(ARDUINO_ARCH_ESP32)
 	get_uptime_ms();
+#endif
 }
 
 } // namespace uuid
