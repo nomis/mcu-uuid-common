@@ -4,6 +4,11 @@ Change log
 Unreleased_
 -----------
 
+1.1.1_ |--| 2022-08-03
+----------------------
+
+Use native 64-bit uptime on the ESP32.
+
 Changed
 ~~~~~~~
 
@@ -73,7 +78,8 @@ Added
 
 .. |--| unicode:: U+2013 .. EN DASH
 
-.. _Unreleased: https://github.com/nomis/mcu-uuid-common/compare/1.1.0...HEAD
+.. _Unreleased: https://github.com/nomis/mcu-uuid-common/compare/1.1.1...HEAD
+.. _1.1.1: https://github.com/nomis/mcu-uuid-common/compare/1.1.0...1.1.1
 .. _1.1.0: https://github.com/nomis/mcu-uuid-common/compare/1.0.2...1.1.0
 .. _1.0.2: https://github.com/nomis/mcu-uuid-common/compare/1.0.1...1.0.2
 .. _1.0.1: https://github.com/nomis/mcu-uuid-common/compare/1.0.0...1.0.1
