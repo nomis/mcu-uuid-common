@@ -21,6 +21,8 @@
 #include <Arduino.h>
 #if defined(ARDUINO_ARCH_ESP32)
 # include <esp_timer.h>
+#elif UUID_COMMON_THREAD_SAFE
+# include <mutex>
 #endif
 
 namespace uuid {
@@ -29,10 +31,16 @@ uint64_t get_uptime_ms() {
 #if defined(ARDUINO_ARCH_ESP32)
 	return esp_timer_get_time() / 1000ULL;
 #else
+# if UUID_COMMON_THREAD_SAFE
+	static std::mutex mutex;
+# endif
 	static uint32_t high_millis = 0;
 	static uint32_t low_millis = 0;
 
 	uint32_t now_millis = ::millis();
+# if UUID_COMMON_THREAD_SAFE
+	std::lock_guard<std::mutex> lock{mutex};
+# endif
 
 	if (now_millis < low_millis) {
 		high_millis++;

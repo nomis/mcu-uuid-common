@@ -21,10 +21,19 @@
 
 #include <Arduino.h>
 
+#if __has_include(<mutex>)
+# include <mutex>
+#endif
 #include <string>
 #include <vector>
 
-#if defined(DOXYGEN) || defined(ARDUINO_ARCH_ESP32)
+#if __has_include(<mutex>) && (!defined(_GLIBCXX_MUTEX) || defined(_GLIBCXX_HAS_GTHREADS))
+# define UUID_COMMON_STD_MUTEX_AVAILABLE 1
+#else
+# define UUID_COMMON_STD_MUTEX_AVAILABLE 0
+#endif
+
+#if defined(DOXYGEN) || defined(ARDUINO_ARCH_ESP32) || UUID_COMMON_STD_MUTEX_AVAILABLE
 # define UUID_COMMON_THREAD_SAFE 1
 #else
 # define UUID_COMMON_THREAD_SAFE 0

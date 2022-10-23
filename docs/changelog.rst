@@ -4,6 +4,12 @@ Change log
 Unreleased_
 -----------
 
+Changed
+~~~~~~~
+
+* Use a mutex where possible to provide thread-safety on non-ESP32
+  platforms.
+
 1.1.2_ |--| 2022-10-23
 ----------------------
 
