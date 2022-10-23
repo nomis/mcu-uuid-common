@@ -11,7 +11,9 @@ Purpose
 
 The primary purpose of this library is to maintain a common 64-bit uptime in
 milliseconds with overflow handling, as long as the loop function is called
-regularly.
+regularly. Thread-safe on the ESP32 but cannot be used from an interrupt
+context.
+
 
 Contents
 --------

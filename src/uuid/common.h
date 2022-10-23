@@ -1,6 +1,6 @@
 /*
  * uuid-common - Microcontroller common utilities
- * Copyright 2019  Simon Arlott
+ * Copyright 2019,2022  Simon Arlott
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -24,6 +24,12 @@
 #include <string>
 #include <vector>
 
+#if defined(DOXYGEN) || defined(ARDUINO_ARCH_ESP32)
+# define UUID_COMMON_THREAD_SAFE 1
+#else
+# define UUID_COMMON_THREAD_SAFE 0
+#endif
+
 /**
  * Common utilities.
  *
@@ -31,6 +37,17 @@
  * - <a href="https://mcu-uuid-common.readthedocs.io/">Documentation</a>
  */
 namespace uuid {
+
+/**
+ * Thread-safe status of the library.
+ *
+ * @since 1.1.2
+ */
+#if UUID_COMMON_THREAD_SAFE
+static constexpr bool thread_safe = true;
+#else
+static constexpr bool thread_safe = false;
+#endif
 
 /**
  * Read a string from flash and convert it to a std::string.

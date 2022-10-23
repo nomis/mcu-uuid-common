@@ -4,6 +4,12 @@ Change log
 Unreleased_
 -----------
 
+Added
+~~~~~
+
+* Indicate whether this version of the library is thread-safe or not
+  (``UUID_COMMON_THREAD_SAFE`` and ``uuid::thread_safe``).
+
 1.1.1_ |--| 2022-08-03
 ----------------------
 
