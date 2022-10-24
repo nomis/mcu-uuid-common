@@ -27,10 +27,12 @@
 #include <string>
 #include <vector>
 
-#if __has_include(<mutex>) && (!defined(_GLIBCXX_MUTEX) || defined(_GLIBCXX_HAS_GTHREADS))
-# define UUID_COMMON_STD_MUTEX_AVAILABLE 1
-#else
-# define UUID_COMMON_STD_MUTEX_AVAILABLE 0
+#ifndef UUID_COMMON_STD_MUTEX_AVAILABLE
+# if __has_include(<mutex>) && (!defined(_GLIBCXX_MUTEX) || defined(_GLIBCXX_HAS_GTHREADS))
+#  define UUID_COMMON_STD_MUTEX_AVAILABLE 1
+# else
+#  define UUID_COMMON_STD_MUTEX_AVAILABLE 0
+# endif
 #endif
 
 #if defined(DOXYGEN) || defined(ARDUINO_ARCH_ESP32) || UUID_COMMON_STD_MUTEX_AVAILABLE
