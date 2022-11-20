@@ -29,5 +29,8 @@
 	"build": {
 		"flags": "-Wall -Wextra",
 		"libLDFMode": "off"
-	}
+	},
+	"headers": [
+		"uuid/common.h"
+	]
 }
